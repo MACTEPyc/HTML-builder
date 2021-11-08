@@ -6,7 +6,7 @@ const fileName = 'text.txt';
 
 const pathFile = path.join(__dirname, fileName);
 
-const stream = new fs.ReadStream(pathFile, {encoding: 'utf-8'});
+const stream = new fs.createReadStream(pathFile, 'utf-8');
 
 stream.pipe(stdout);
 
