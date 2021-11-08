@@ -11,7 +11,6 @@ const pathDir = path.join(__dirname, nameDir);
     for (const file of files) {
       if (!file.isDirectory()) {
         const pathFile = path.join(pathDir, file.name);
-        console.log(pathFile);
         stat(pathFile, (err, stats) => {
           const extName = path.extname(file.name);
           const fileName = path.basename(pathFile, extName);
